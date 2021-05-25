@@ -1,0 +1,26 @@
+<div>
+    <form [formGroup]="userForm">
+        <div class="mb-3">
+            <label for="amount">$ Amount to request
+                <input type="text" class="form-control" formControlName="amount" id="amount" required>
+            </label>
+        </div>
+
+        <div class="mb-3">
+            <label for="desciption">Write a description
+                <input type="text" class="form-control" formControlName="desciption" id="desciption">
+            </label>
+        </div>
+        
+
+        
+        <div  class="mb-3">
+          <label for="userSelection">Assign to Group Member</label>
+        <select class="form-control" id="userSelection" formControlName="assignee" required>
+            <option *ngFor="let user of usersList" [value]="user.username">{{user.username}}</option>
+        </select>  
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit(userForm)">Submit</button>
+    </form>
+    
+</div>

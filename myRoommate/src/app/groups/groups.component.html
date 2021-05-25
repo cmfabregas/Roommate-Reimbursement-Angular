@@ -1,0 +1,20 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Group ID</th>
+        <th scope="col">Group Name</th>
+        <th scope="col">Group Description</th>
+        <th scope="col">Navigate to Group</th>
+        <!-- <th scope="col">Handle</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tempGroup of groups">
+          <td>{{tempGroup.groupId}}</td>
+          <td>{{tempGroup.groupName}}</td>
+          <td>{{tempGroup.groupDescription}}</td>
+          <td><a routerLink="/home/reimbursement/{{tempGroup.groupId}}">Here</a></td>
+      </tr>
+    </tbody>
+  </table>
+  

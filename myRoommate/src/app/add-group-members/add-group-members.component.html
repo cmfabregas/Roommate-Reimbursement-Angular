@@ -1,0 +1,18 @@
+<div class="form-group">
+    <form [formGroup] = "addGroupMember">
+        <div class="mb-3">
+            <label for="selectGroup">Group Name</label>
+            <select class="form-control" id="selectGroup" formControlName="groupId">
+                <option *ngFor="let tempGroup of groups" value="{{tempGroup.groupId}}">{{tempGroup.groupName}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="username">Username</label>
+            <input type="text" class="form-control"  id="username" formControlName = "username">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" (click)="submitGroup(addGroupMember)">Add Group Member</button>
+        </div>   
+    </form>
+    
+</div>

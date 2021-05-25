@@ -1,0 +1,40 @@
+<!-- <div *ngIf="groupCreated" class="alert alert-success" id="warning_alert" role="alert" style="padding-top:0px; position: relative;">
+    Group has been Successfully Created
+</div> -->
+
+
+<div class="container" id="newGroup">
+    <div class="row">
+        <div class="col-sm">
+           <div class="form-group">
+               <form [formGroup] = "groupGroup">
+                <div class="mb-3">
+                    <label for="groupName">Group Name</label>
+                    <input class="form-control" type="text" id="groupName" formControlName="groupName">
+                </div>
+                <div class="mb-3">
+                    <label for="groupDescription">Group Description</label>
+                    <input type="text" class="form-control"  id="groupDescription" formControlName = "groupDescription">
+                    <!-- <textarea class="form-control" id="groupDescription" rows="3" [(ngModel)]="groupDescription"></textarea> -->
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" (click)="submitGroup(groupGroup)">Create Group</button>
+                </div>    
+               </form>       
+            </div>
+        </div>
+        <!-- <p>
+            <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">{{ successMessage }}
+            </ngb-alert>
+        </p> -->
+        <!-- <p *ngIf="groupCreated"> {{groupCreationStatus}}</p> -->
+    </div>
+
+</div>
+<div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+          </div>
+    </div>
+</div>

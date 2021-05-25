@@ -1,0 +1,41 @@
+<div id="login">
+  <h3 class="text-center text-white pt-5">Registration</h3>
+
+
+  
+  <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+              <div id="login-box" class="col-md-12">
+                  <form id="login-form" class="form" [formGroup] = "foodGroup">
+                      <div class="form-group">
+                          <label for="username" class="text-info">Username:</label><br>
+                          <input type="text" name="username" id="username" class="form-control" formControlName="username">
+                      </div>
+                      <div class="form-group">
+                          <label for="password" class="text-info">Password:</label><br>
+                          <input type="text" name="password" id="password" class="form-control" formControlName="password">
+                      </div>
+                      <div class="form-group">
+                        <label for="password" class="text-info">Email:</label><br>
+                        <input type="text" name="password" id="password" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname" class="text-info">firstName:</label><br>
+                        <input type="text" name="firstName" id="password" class="form-control" formControlName="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname" class="text-info">lastName:</label><br>
+                        <input type="text" name="firstName" id="password" class="form-control" formControlName="lastName">
+                    </div>
+                      <div class="form-group">
+                          <button type="submit" class="btn btn-info btn-md" (click) = "submitFood(foodGroup)">Submit</button>
+                           
+                      </div>
+                      
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

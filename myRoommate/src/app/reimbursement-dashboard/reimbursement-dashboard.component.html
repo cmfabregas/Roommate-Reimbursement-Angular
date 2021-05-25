@@ -1,0 +1,25 @@
+<app-reimbursement></app-reimbursement>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Amount</th>
+            <th scope="col">Description</th>
+            <th scope="col">Receipt</th>
+            <th scope="col">Has Paid</th>
+            <th scope="col">User name</th>
+            <th scope="col">Upload</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reimbur of reimbursementList">
+            <td>{{reimbur.reimbAmount}}</td>
+            <td>{{reimbur.reimbDescription}}</td>
+            <td>{{reimbur.reimbReceipt}}</td>
+            <td>{{reimbur.reimbFullyPaid}}</td>
+            <td>{{reimbur.username}}</td>
+            <td><a routerLink="/upload/{{reimbur.reimbId}}">Upload</a></td>
+        </tr>
+    </tbody>
+
+    </table>
